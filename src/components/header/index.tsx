@@ -9,7 +9,7 @@ export default function Header() {
 	useEffect(() => {
 		const handleScroll = () => {
 			if (headerRef.current) {
-				const stickyPoint = headerRef.current.offsetTop;
+				const stickyPoint = headerRef.current;
 				setIsSticky(window.pageYOffset > stickyPoint);
 			}
 		};
@@ -31,8 +31,8 @@ export default function Header() {
 					? window.innerWidth <= 1024
 						? 550
 						: window.innerWidth <= 1400
-						? 650
-						: 750
+							? 650
+							: 750
 					: -120;
 			const targetPosition =
 				element.getBoundingClientRect().top + window.scrollY;
@@ -50,9 +50,8 @@ export default function Header() {
 		<header className={`${styles.header}`}>
 			<nav
 				ref={headerRef}
-				className={`${styles.menu} ${styles.fullWidthMenu} ${
-					isSticky && styles.sticky
-				}`}
+				className={`${styles.menu} ${styles.fullWidthMenu} ${isSticky && styles.sticky
+					}`}
 			>
 				<h1>VAEC</h1>
 				<ul>
@@ -104,9 +103,8 @@ export default function Header() {
 					></i>
 				</nav>
 				<div
-					className={`${isVisible && styles.active} ${
-						styles.wrapperSideBarMenu
-					}`}
+					className={`${isVisible && styles.active} ${styles.wrapperSideBarMenu
+						}`}
 				>
 					<nav className={`${styles.sideMenu}`}>
 						<i
