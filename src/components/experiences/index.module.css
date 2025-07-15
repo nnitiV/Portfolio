@@ -95,7 +95,7 @@
 
     .experiences .experience {
         width: 100%;
-        height: calc(13vw + 13rem);
+        height: calc(12vw + 12rem);
         padding: calc(1vw + 1rem) calc(1.1vw + .75rem);
         border-radius: 0 !important;
     }
@@ -108,7 +108,6 @@
     .experiences .experience header h2 {
         font-size: calc(2.15vw + .6rem);
     }
-
 
     .experiences .experience header .date .separator {
         font-size: 3vw;
@@ -129,7 +128,7 @@
 
     .experiences .experience .main .desc {
         width: 75%;
-        font-size: calc(.75vw + .75rem);
+        font-size: calc(.65vw + .65rem);
         height: fit-content;
         margin-bottom: -3rem;
     }
@@ -142,4 +141,37 @@
     .experiences .experience .main .threeDots p {
         font-size: calc(3vw + 3rem);
     }
+}
+
+@media (max-width: 600px) {
+    .experiences h1 {
+        font-size: calc(1.15vw + 1.15rem);
+    }
+
+    .experiences .experience {
+        height: fit-content;
+        padding: calc(2vw + 2rem) calc(1.5vw + 1.5rem);
+        padding: calc(1.5vw + 1.5rem) calc(.5vw + .5rem) calc(4vw + 4rem);
+    }
+
+    .experiences .experience header {
+        margin-bottom: .5rem;
+    }
+
+    .experiences .experience header h2 {
+        font-size: calc(2vw + .4rem);
+    }
+
+    .experiences .experience .main .desc {
+        font-size: calc(.65vw + .65rem);
+        height: fit-content;
+        width: 100%;
+    }
+
+    .experiences .experience .main .threeDots {
+        height: 100px;
+        display: none;
+        font-size: calc(3.25vw + 3.25rem);
+    }
+
 }

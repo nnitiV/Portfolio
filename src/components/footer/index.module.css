@@ -89,6 +89,22 @@
 
 @media (max-width: 1024px) {
     .footer .socialMedias {
-        width: 60vw;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer h1 {
+        font-size: calc(1.05vw + 1.05rem);
+        text-align: center;
+        color: white;
+        z-index: 4;
+        transition: .3s ease-in-out all;
+    }
+
+    .footer .socialMedias a svg {
+        width: calc(3.5vw + 3rem);
+        height: calc(3.5vw + 3rem);
+        padding: 1rem;
     }
 }

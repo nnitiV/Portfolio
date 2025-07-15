@@ -110,3 +110,19 @@
         transition: .25s ease-in-out all;
     }
 }
+
+@media (max-width: 600px) {
+    .skillsSection h2 {
+        font-size: calc(3.75vw + .8rem);
+    }
+
+    .skillsSection .skillsDivs {
+        height: calc(100vw + 5rem);
+    }
+
+    .skillsSection .skillsDivs .backEnd,
+    .skillsSection .skillsDivs .frontEnd {
+        width: 100vw;
+        border-radius: 0;
+    }
+}

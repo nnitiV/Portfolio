@@ -69,3 +69,9 @@
         height: calc(15vw + 12rem);
     }
 }
+
+@media (max-width: 600px) {
+    .aboutMe img {
+        width: calc(10vw + 10rem);
+    }
+}

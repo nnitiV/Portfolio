@@ -199,3 +199,21 @@
         display: none;
     }
 }
+
+@media (max-width: 600px) {
+    .sideBarMenu .menu {
+        padding: .75rem 2rem;
+    }
+
+    .sideBarMenu .menu.sticky {
+        margin: 0;
+        padding: 1rem 2rem;
+    }
+
+    .sideBarMenu .wrapperSideBarMenu .sideMenu {
+        width: 100vw;
+        align-items: center;
+        text-align: center;
+    }
+
+}
