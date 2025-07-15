@@ -1,0 +1,43 @@
+:root {
+    --aqua-1: #F8FAFA;
+    --aqua-2: #6FDAED;
+    --aqua-bg-2: rgba(111, 218, 237, 0.15);
+    --blue-bg-1: rgba(120, 158, 229, 0.25);
+    --blue-1: #789EE5;
+    --blue-2: #366FD9;
+    --blue-3: #3F7DF2;
+    --blue-4: #275EC4;
+    --blue-5: #1852C0;
+    --blue-6: #0B3A53;
+    --blue-7: #1D253A;
+    --blue-8: #DAE0EF;
+    --blue-9: #F5FDFE;
+    --blue-10: #1D4E5F;
+    --blue-11: #0C1B36;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lemon", serif;
+    user-select: none;
+}
+
+.about-section {
+    height: fit-content;
+    border-radius: 0 0 calc(10vw + 4rem + 50%) calc(10vw + 4rem + 50%);
+    padding-bottom: calc(10vw + 2rem);
+    width: 99.15vw;
+    background-color: white;
+    margin-bottom: calc(-25vw + -25rem);
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 1rem 1rem var(--aqua-bg-2);
+}
+
+@media (max-width :1024px) {
+    .about-section {
+        padding-bottom: calc(20vw + 10rem);
+    }
+}

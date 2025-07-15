@@ -1,0 +1,71 @@
+.aboutMe {
+    width: calc(55vw + 5rem);
+    height: 70vh;
+    margin: 0 auto calc(1vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.aboutMe .info {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20rem;
+}
+
+.aboutMe .info h1 {
+    text-align: center;
+    font-size: calc(1vw + 1rem);
+    margin-bottom: calc(3vw + 2rem);
+}
+
+.aboutMe .info p {
+    width: calc(26vw + 6rem);
+    text-align: center;
+    font-size: calc(.5vw + .5rem);
+}
+
+.aboutMe img {
+    border-radius: 32rem;
+    transform: rotateY(180deg);
+    width: calc(12vw + 10rem);
+    height: calc(12vw + 10rem);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+    transition: .5s ease-in-out all;
+    margin-top: 20rem;
+}
+
+.aboutMe img:hover {
+    transform: rotateY(0deg);
+}
+
+@media (max-width: 1024px) {
+    .aboutMe {
+        flex-direction: column;
+    }
+
+    .aboutMe .info {
+        margin-top: calc(20vw + 4rem);
+    }
+
+
+    .aboutMe .info h1 {
+        width: 95vw;
+        font-size: calc(1.75vw + 1.75rem);
+    }
+
+    .aboutMe .info p {
+        width: 70vw;
+        font-size: calc(.7vw + .7rem);
+    }
+
+    .aboutMe img {
+        margin-top: calc(2vw + 2rem);
+        width: calc(15vw + 12rem);
+        height: calc(15vw + 12rem);
+    }
+}

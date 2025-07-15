@@ -1,0 +1,145 @@
+.experiences {
+    background: linear-gradient(var(--blue-5), var(--blue-5), var(--blue-1));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(3.5vw + 3rem);
+}
+
+.experiences h1 {
+    font-size: calc(1.5vw + 1.5rem);
+    color: var(--blue-9);
+    transition: .2s ease-in-out all;
+}
+
+.experiences h1:hover {
+    transform: scale(1.25);
+}
+
+.experiences .experience {
+    width: calc(25vw + 25rem);
+    height: calc(11vw + 11rem);
+    padding: calc(2vw + 2rem) calc(1.5vw + 1.5rem);
+    border-radius: .5rem;
+    background-color: white;
+    color: var(--blue-6);
+    transition: .2s ease-in-out all;
+}
+
+.experiences .experience:hover {
+    transform: scale(1.15) translateY(-2.5rem);
+}
+
+.experiences .experience:first-of-type {
+    margin: calc(3vw + 2rem) 0;
+}
+
+.experiences .experience header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: calc(1.5vw + 1.5rem);
+}
+
+.experiences .experience header h2 {
+    font-size: calc(.75vw + .75rem);
+}
+
+.experiences .experience header .date .separator {
+    font-size: calc(.75vw + 1rem);
+    margin-right: calc(.75vw + .75rem);
+}
+
+.experiences .experience header .date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(.75vw + .25rem);
+}
+
+.experiences .experience .main {
+    width: calc(21vw + 21rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.experiences .experience .main .desc {
+    width: calc(16vw + 16rem);
+    font-size: calc(.5vw + .5rem);
+    color: var(--blue-10);
+}
+
+
+.experiences .experience .main .threeDots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+}
+
+.experiences .experience .main .threeDots p {
+    font-size: calc(2vw + 2rem);
+    height: fit-content;
+    margin-bottom: -3rem;
+}
+
+@media (max-width: 1024px) {
+    .experiences {
+        padding: 5rem 0;
+    }
+
+    .experiences h1 {
+        font-size: calc(2vw + 2rem);
+    }
+
+    .experiences .experience {
+        width: 100%;
+        height: calc(13vw + 13rem);
+        padding: calc(1vw + 1rem) calc(1.1vw + .75rem);
+        border-radius: 0 !important;
+    }
+
+    .experiences .experience:hover {
+        transform: scale(1) translateY(-25px);
+    }
+
+
+    .experiences .experience header h2 {
+        font-size: calc(2.15vw + .6rem);
+    }
+
+
+    .experiences .experience header .date .separator {
+        font-size: 3vw;
+        margin-right: calc(1vw + 1rem);
+        margin-right: .5rem;
+    }
+
+    .experiences .experience header .date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2vw;
+    }
+
+    .experiences .experience .main {
+        width: 100%;
+    }
+
+    .experiences .experience .main .desc {
+        width: 75%;
+        font-size: calc(.75vw + .75rem);
+        height: fit-content;
+        margin-bottom: -3rem;
+    }
+
+    .experiences .experience .main .threeDots {
+        width: 25%;
+        margin-top: 2vw;
+    }
+
+    .experiences .experience .main .threeDots p {
+        font-size: calc(3vw + 3rem);
+    }
+}

@@ -1,0 +1,155 @@
+.projectsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(1.5vw + 1.5rem) 0 0;
+}
+
+.projectsSection h1 {
+    font-size: calc(1.5vw + 1.5rem);
+    margin-bottom: calc(3vw + 3rem);
+    color: var(--blue-7);
+    transition: .2s ease-in-out all;
+}
+
+.projectsSection h1:hover {
+    transform: scale(1.25);
+}
+
+.projectsSection .projects {
+    width: calc(60vw + 20rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectsSection .projects .project {
+    width: calc(20vw + 15rem);
+    border-radius: 0.5rem;
+    padding: calc(1.5vw + 1.5rem);
+    background: linear-gradient(var(--blue-3), var(--blue-4));
+    color: var(--blue-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: calc(3vw + 3rem);
+    transition: .3s ease-in-out all;
+}
+
+.projectsSection .projects .project:hover {
+    transform: translateY(-2rem) scale(1.1);
+}
+
+.projectsSection .projects .project h2 {
+    font-size: calc(1vw + 1rem);
+    margin-bottom: calc(1.5vw + 1.5rem);
+    overflow-y: hidden;
+}
+
+.projectsSection .projects .project .desc {
+    color: var(--blue-8);
+    text-align: center;
+    margin-bottom: calc(1.5vw + 1.5rem);
+    overflow-y: hidden;
+}
+
+.projectsSection .projects .project .tecnologies {
+    margin-bottom: calc(1.5vw + 1.5rem);
+}
+
+.projectsSection .projects .project .tecnologies p {
+    font-size: calc(.75vw + .75rem);
+    margin-bottom: 1rem;
+}
+
+.projectsSection .projects .project .tecnologies .allTecnologies {
+    width: calc(15vw + 15rem);
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectsSection .projects .project .tecnologies .allTecnologies svg {
+    height: calc(2.5vw + 2.5rem);
+    transition: .3s ease-in-out all;
+}
+
+.projectsSection .projects .project .tecnologies .allTecnologies svg:hover {
+    transform: translateY(-.5rem);
+}
+
+.projectsSection .projects .project .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    transition: .15s ease all;
+    position: relative;
+    cursor: pointer;
+}
+
+.projectsSection .projects .project .link::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .3s ease-in-out all;
+}
+
+.projectsSection .projects .project .link:hover::after {
+    width: 94%;
+}
+
+.projectsSection .projects .project .link p,
+.projectsSection .projects .project .link i {
+    margin-right: calc(.75vw + .25rem);
+    font-size: calc(.5vw + 1.25rem);
+    overflow-y: hidden;
+}
+
+@media (max-width: 1024px) {
+
+    .projectsSection h1 {
+        font-size: calc(2vw + 2rem);
+    }
+
+    .projectsSection .projects {
+        width: 60vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projectsSection .projects .project {
+        width: 80vw;
+    }
+
+    .projectsSection .projects .project h2 {
+        font-size: calc(1.75vw + 1.75rem);
+    }
+
+    .projectsSection .projects .project .desc {
+        font-size: calc(.75vw + .75rem);
+    }
+
+    .projectsSection .projects .project .tecnologies {
+        width: 70%;
+    }
+
+    .projectsSection .projects .project .tecnologies p {
+        font-size: calc(1vw + 1rem);
+        text-decoration: underline;
+    }
+
+    .projectsSection .projects .project .tecnologies .allTecnologies {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .projectsSection .projects .project .tecnologies .allTecnologies svg {
+        height: calc(3.5vw + 3.5rem);
+        transition: .3s ease-in-out all;
+    }
+}

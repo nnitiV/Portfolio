@@ -1,0 +1,112 @@
+.skillsSection {
+    padding-top: calc(30vw + 30rem);
+    padding-bottom: calc(10vw + 5rem);
+    background: linear-gradient(var(--aqua-2), var(--blue-4));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.skillsSection h2 {
+    font-size: calc(2vw + 1.5rem);
+    margin-bottom: 8.875rem;
+    transition: .2s ease-in-out all;
+}
+
+.skillsSection h2:hover {
+    transform: scale(1.25);
+}
+
+.skillsSection .skillsDivs {
+    width: calc(60vw + 20rem);
+    display: flex;
+    justify-content: space-between;
+    color: var(--blue-7);
+}
+
+.skillsSection .skillsDivs .frontEnd,
+.skillsSection .skillsDivs .backEnd {
+    width: calc(27vw + 8rem);
+    height: calc(8vw + 5rem);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    text-align: center;
+    padding: calc(1vw + 1rem) 0 calc(.8vw + .6rem);
+    font-size: calc(1vw + 1rem);
+    transition: .2s ease-in-out all;
+}
+
+.skillsSection .skillsDivs .frontEnd:hover,
+.skillsSection .skillsDivs .backEnd:hover {
+    transform: translateY(-1rem);
+}
+
+.skillsSection .skillsDivs .frontEnd .skills,
+.skillsSection .skillsDivs .backEnd .skills {
+    width: calc(20vw + 9rem);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+
+.skillsSection .skillsDivs .frontEnd .skills svg,
+.skillsSection .skillsDivs .backEnd .skills svg {
+    width: calc(3vw + 2rem);
+    height: calc(3vw + 2rem);
+    transition: .25s ease-in-out all;
+}
+
+.skillsSection .skillsDivs .frontEnd .skills svg:hover,
+.skillsSection .skillsDivs .backEnd .skills svg:hover {
+    transform: translateY(-.5rem);
+}
+
+@media (max-width: 1024px) {
+
+    .skillsSection h2 {
+        font-size: calc(3vw + 1.5rem);
+    }
+
+    .skillsSection .skillsDivs {
+        width: 60vw;
+        height: calc(40dvh + 15rem);
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .skillsSection .skillsDivs h3 {
+        font-size: calc(2vw + 2rem);
+    }
+
+    .skillsSection .skillsDivs .frontEnd,
+    .skillsSection .skillsDivs .backEnd {
+        width: calc(35vw + 15rem);
+        height: calc(10vw + 10rem);
+        padding: 2rem;
+    }
+
+    .skillsSection .skillsDivs .backEnd .skills,
+    .skillsSection .skillsDivs .frontEnd .skills {
+        width: 90%;
+    }
+
+    .skillsSection .skillsDivs .frontEnd .skills svg,
+    .skillsSection .skillsDivs .backEnd .skills svg {
+        width: calc(4vw + 2rem);
+        height: calc(4vw + 2rem);
+    }
+
+    .skillsSection .skillsDivs .frontEnd .skills svg,
+    .skillsSection .skillsDivs .backEnd .skills svg {
+        width: calc(4vw + 2.5rem);
+        height: calc(4vw + 2.5rem);
+        transition: .25s ease-in-out all;
+    }
+}

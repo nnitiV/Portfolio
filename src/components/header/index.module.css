@@ -1,0 +1,201 @@
+.header {
+    width: max-content;
+    height: max-content;
+    color: white;
+    margin: 3.5rem auto 0;
+    position: relative;
+    z-index: 2;
+    border-radius: 2rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .25);
+}
+
+.header .menu {
+    width: 90vw;
+    background: linear-gradient(90deg, var(--blue-3), var(--blue-4));
+    border-radius: 2rem;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s ease-in-out all;
+}
+
+.header .menu.sticky {
+    width: 100vw;
+    position: fixed;
+    border-radius: 0;
+    top: 0;
+    left: 50% !important;
+    margin: 0;
+}
+
+.header .menu h1 {
+    font-size: calc(1vw + 1.375rem);
+    transition: .3s ease-in-out all;
+}
+
+.header .menu h1:hover {
+    transform: scale(1.25);
+    cursor: grabbing;
+}
+
+.header .menu ul {
+    width: 47.5vw;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: calc(1vw + .5rem);
+    margin-top: 4px;
+}
+
+.header .menu ul li {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color .2s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.header .menu ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: .3s ease-in-out all;
+}
+
+.header .menu ul li:hover::after {
+    width: 100%;
+}
+
+.header .menu ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.header .menu img {
+    width: calc(4vw + .75rem);
+    transition: .75s ease-in-out all;
+}
+
+.header .menu img:hover {
+    cursor: pointer;
+    transform: rotateZ(360deg);
+}
+
+.sideBarMenu {
+    display: none;
+}
+
+.sideBarMenu .menu {
+    width: 75vw;
+    padding: 1.5rem 5rem;
+}
+
+.sideBarMenu .menu h1 {
+    font-size: calc(4vw + 1.5rem);
+}
+
+.sideBarMenu .menu i {
+    font-size: calc(4vw + 1.5rem);
+    transition: .15s ease-in-out all;
+}
+
+.sideBarMenu .menu i:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.sideBarMenu .wrapperSideBarMenu {
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(5, 5, 5, .15);
+    backdrop-filter: blur(3px);
+    visibility: hidden;
+}
+
+.sideBarMenu .wrapperSideBarMenu.active {
+    visibility: visible;
+}
+
+.sideBarMenu .wrapperSideBarMenu .sideMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: linear-gradient(90deg, var(--blue-3), var(--blue-4));
+    font-size: calc(2vw + 2rem);
+    padding: calc(2vw + 2rem) calc(2vw + 1rem);
+    transition: .3s ease-in-out all;
+    transform: translateX(50rem);
+}
+
+.sideBarMenu .wrapperSideBarMenu.active .sideMenu {
+    transform: translateX(0);
+}
+
+.sideBarMenu .wrapperSideBarMenu .sideMenu i {
+    font-size: calc(3vw + 3rem);
+    transition: .3s ease-in-out all;
+    width: fit-content;
+}
+
+.sideBarMenu .wrapperSideBarMenu .sideMenu i:hover {
+    transform: rotateZ(180deg);
+    cursor: pointer;
+}
+
+.sideBarMenu .wrapperSideBarMenu .sideMenu ul {
+    list-style: none;
+    font-size: calc(1vw + 2rem);
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sideBarMenu .wrapperSideBarMenu .sideMenu ul a {
+    text-decoration: none;
+    color: white;
+    transition: .3s ease-in-out all;
+}
+
+.sideBarMenu .wrapperSideBarMenu .sideMenu ul a:hover {
+    transform: scale(1.1);
+}
+
+.sideBarMenu .wrapperSideBarMenu .sideMenu img {
+    width: calc(4vw + 4rem);
+    transition: .5s ease-in-out all;
+}
+
+.sideBarMenu .wrapperSideBarMenu .sideMenu img:hover {
+    transform: rotateZ(360deg);
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        margin: 0;
+    }
+
+    .sideBarMenu {
+        display: block;
+    }
+
+    .menu.fullWidthMenu {
+        display: none;
+    }
+}

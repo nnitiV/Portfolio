@@ -1,0 +1,94 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    height: calc(12.5vw + 12.5rem);
+    background: var(--blue-11);
+}
+
+
+.footer h1 {
+    font-size: calc(1.5vw + 1.5rem);
+    color: white;
+    z-index: 4;
+    transition: .3s ease-in-out all;
+}
+
+.footer h1:hover {
+    transform: skewX(20deg);
+}
+
+.footer .socialMedias {
+    width: calc(40vw + 10rem);
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+}
+
+.footer .socialMedias a {
+    position: relative;
+    z-index: 999;
+}
+
+.socialMedias a.github::after {
+    border-top-color: black !important;
+    border-right-color: black !important;
+    border-bottom-color: black !important;
+    border-left-color: black !important;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.socialMedias a.instagram::after {
+    border-top-color: #D62976 !important;
+    border-right-color: #D62976 !important;
+    border-bottom-color: #D62976 !important;
+    border-left-color: #D62976 !important;
+    background-color: rgba(214, 41, 119, 0.25);
+}
+
+.socialMedias a.gmail::after {
+    border-top-color: red !important;
+    border-right-color: red !important;
+    border-bottom-color: red !important;
+    border-left-color: red !important;
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+.socialMedias a::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 50%;
+    z-index: -1;
+    border: 4px solid transparent;
+    transition: .3s ease-in-out all;
+    box-sizing: border-box;
+    border-top-color: var(--blue-1);
+    border-right-color: var(--blue-1);
+    border-bottom-color: var(--blue-1);
+    border-left-color: var(--blue-1);
+    background-color: var(--blue-bg-1);
+    clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+}
+
+.socialMedias a:hover::after {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.footer .socialMedias a svg {
+    width: calc(4vw + 4rem);
+    height: calc(4vw + 4rem);
+    padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .footer .socialMedias {
+        width: 60vw;
+    }
+}
