@@ -2,7 +2,7 @@ import styles from "./index.module.css"
 
 const Projects = () => {
   return (
-    <section className={styles.projectsSection}>
+    <section className={styles.projectsSection} id="projects">
       <h1>MEUS PROJETOS</h1>
       <div className={styles.projects}>
         <div className={styles.project}>
