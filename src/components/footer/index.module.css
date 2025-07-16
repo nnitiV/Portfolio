@@ -94,12 +94,23 @@
 }
 
 @media (max-width: 600px) {
+    .footer {
+        padding: 2rem;
+        height: fit-content;
+    }
+
     .footer h1 {
         font-size: calc(1.5vw + 1.5rem);
         text-align: center;
         color: white;
         z-index: 4;
         transition: .3s ease-in-out all;
+    }
+
+    .footer .socialMedias {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 2rem;
     }
 
     .footer .socialMedias a svg {

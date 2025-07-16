@@ -72,6 +72,6 @@
 
 @media (max-width: 600px) {
     .aboutMe img {
-        width: calc(10vw + 10rem);
+        width: calc(8vw + 8rem);
     }
 }

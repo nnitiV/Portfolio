@@ -30,6 +30,7 @@
     padding-bottom: calc(10vw + 2rem);
     width: 99.15vw;
     background-color: white;
+    margin-top: -5rem;
     margin-bottom: calc(-25vw + -25rem);
     position: relative;
     z-index: 5;
@@ -38,6 +39,7 @@
 
 @media (max-width :1024px) {
     .about-section {
+        margin-top: 0;
         padding-bottom: calc(20vw + 10rem);
     }
 }

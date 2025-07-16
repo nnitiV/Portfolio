@@ -18,7 +18,7 @@
 
 .experiences .experience {
     width: calc(25vw + 25rem);
-    height: calc(11vw + 11rem);
+    height: fit-content;
     padding: calc(2vw + 2rem) calc(1.5vw + 1.5rem);
     border-radius: .5rem;
     background-color: white;

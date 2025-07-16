@@ -8,8 +8,7 @@ const Projects = () => {
         <div className={styles.project}>
           <h2>CHAMB - Online Store</h2>
           <div className={styles.desc}>
-            Eu sou um programador Web que ama estar constantemente aprendendo novas  tecnologias! Atualmente estou aprimorando minhas habilidades em ReactJS e NodeJS, mas eu também sei produzir ótimos projetos em Java / SpringBoot!
-            Sou apaixonado por tecnologia, e meu maior sonho é um dia aprender de tudo, pelo menos um pouco.
+            Chamb é um e-commerce fictício desenvolvido para simular um ambiente real de vendas online, com arquitetura modular e código limpo seguindo princípios SOLID. O projeto prioriza escalabilidade, boas práticas de desenvolvimento e uma experiência completa (do catálogo ao checkout), servindo como base para estudos ou adaptação em cenários comerciais.
           </div>
           <div className={styles.tecnologies}>
             <p>Tecnologias:</p>
@@ -28,15 +27,16 @@ const Projects = () => {
               </svg>
             </div>
           </div>
-          <div className={styles.link}>
-            Projeto no GitHub  <i style={{ marginLeft: "8px" }} className="fa-solid fa-arrow-right"></i>
-          </div>
+          <a href="https://github.com/nnitiV/OnlineStore_Chamb" style={{ textDecoration: "none", color: "white" }} target="_blank">
+            <div className={styles.link}>
+              Projeto no GitHub  <i style={{ marginLeft: "8px" }} className="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
         </div>
         <div className={styles.project}>
           <h2>Odonto Gran Viana</h2>
           <div className={styles.desc}>
-            Eu sou um programador Web que ama estar constantemente aprendendo novas  tecnologias! Atualmente estou aprimorando minhas habilidades em ReactJS e NodeJS, mas eu também sei produzir ótimos projetos em Java / SpringBoot!
-            Sou apaixonado por tecnologia, e meu maior sonho é um dia aprender de tudo, pelo menos um pouco.
+            Esta é uma landing page com o intuito de estar divulgado a marca da clínica Odontológica chamada Gran Viana, com intuito de impulsionar os lucros do site com design moderno e responsivo, priorizando a conversão e fidelização de novos clientes para a mesma, apresentando a clínica, seus tratamentos, ambiente, e uma breve introdução sobre os serviços prestados
           </div>
           <div className={styles.tecnologies}>
             <p>Tecnologias:</p>
@@ -55,9 +55,11 @@ const Projects = () => {
               </svg>
             </div>
           </div>
-          <div className={styles.link}>
-            Projeto no GitHub  <i style={{ marginLeft: "8px" }} className="fa-solid fa-arrow-right"></i>
-          </div>
+          <a href="https://odontogranvianna.com/" style={{ textDecoration: "none", color: "white" }} target="_blank">
+            <div className={styles.link}>
+              Link para o site  <i style={{ marginLeft: "8px" }} className="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
         </div>
       </div>
     </section>
