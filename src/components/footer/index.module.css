@@ -33,11 +33,11 @@
 }
 
 .socialMedias a.github::after {
-    border-top-color: black !important;
-    border-right-color: black !important;
-    border-bottom-color: black !important;
-    border-left-color: black !important;
-    background-color: rgba(0, 0, 0, 0.15);
+    border-top-color: white !important;
+    border-right-color: white !important;
+    border-bottom-color: white !important;
+    border-left-color: white !important;
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .socialMedias a.instagram::after {
@@ -95,7 +95,7 @@
 
 @media (max-width: 600px) {
     .footer h1 {
-        font-size: calc(1.05vw + 1.05rem);
+        font-size: calc(1.5vw + 1.5rem);
         text-align: center;
         color: white;
         z-index: 4;
@@ -103,8 +103,8 @@
     }
 
     .footer .socialMedias a svg {
-        width: calc(3.5vw + 3rem);
-        height: calc(3.5vw + 3rem);
+        width: calc(5vw + 5rem);
+        height: calc(5vw + 5rem);
         padding: 1rem;
     }
 }
