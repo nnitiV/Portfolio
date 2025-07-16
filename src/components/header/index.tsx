@@ -8,10 +8,7 @@ export default function Header() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (headerRef.current) {
-				const stickyPoint = headerRef.current;
-				setIsSticky(window.pageYOffset > stickyPoint);
-			}
+			setIsSticky(window.pageYOffset >= 1);
 		};
 
 		// Add event listener when component mounts
@@ -21,7 +18,7 @@ export default function Header() {
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
-	}, []);
+	}, [window.scrollY]);
 
 	const handleSmoothScroll = (id: string) => {
 		const element = document.getElementById(id);
