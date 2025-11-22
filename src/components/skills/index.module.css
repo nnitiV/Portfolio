@@ -27,7 +27,7 @@
 
 .skillsSection .skillsDivs .frontEnd,
 .skillsSection .skillsDivs .backEnd {
-    width: calc(27vw + 8rem);
+    width: calc(30vw + 8rem);
     height: calc(8vw + 5rem);
     border-radius: 2rem;
     display: flex;
@@ -47,7 +47,7 @@
 
 .skillsSection .skillsDivs .frontEnd .skills,
 .skillsSection .skillsDivs .backEnd .skills {
-    width: calc(20vw + 9rem);
+    width: calc(25vw + 9rem);
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
