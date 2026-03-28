@@ -9,7 +9,7 @@ export default function AboutMe() {
 					Eu sou um programador Web que ama estar constantemente aprendendo
 					novas tecnologias! Atualmente estou aprimorando minhas habilidades em
 					ReactJS e NodeJS, mas eu também sei produzir ótimos projetos em Java /
-					SpringBoot! Sou apaixonado por tecnologia, e meu maior sonho é um dia
+					SpringBoot e C# / .NET! Sou apaixonado por tecnologia, e meu maior sonho é um dia
 					aprender de tudo, pelo menos um pouco.
 				</p>
 			</div>

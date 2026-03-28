@@ -1,29 +1,41 @@
+/* --- Seção de Projetos --- */
 .projectsSection {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: calc(1.5vw + 1.5rem) 0 0;
+    padding: calc(1.5vw + 1.5rem) 2rem;
+    margin-bottom: 4rem;
+    width: 100%;
 }
 
 .projectsSection h1 {
-    font-size: calc(1.5vw + 1.5rem);
-    margin-bottom: calc(3vw + 3rem);
+    /* Clamped: Min 1.6rem, Preferred 3vw, Max 2.5rem */
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    margin-bottom: calc(2vw + 2rem);
     color: var(--blue-7);
     transition: .2s ease-in-out all;
+    text-align: center;
 }
 
 .projectsSection h1:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
 }
 
+/* Container Grid */
 .projectsSection .projects {
-    width: calc(60vw + 20rem);
-    display: flex;
-    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: calc(2vw + 2rem); 
+    justify-items: center; 
 }
 
+/* Card do Projeto */
 .projectsSection .projects .project {
-    width: calc(20vw + 15rem);
+    width: 100%; 
+    height: 100%; 
+    max-width: 500px;
     border-radius: 0.5rem;
     padding: calc(1.5vw + 1.5rem);
     background: linear-gradient(var(--blue-3), var(--blue-4));
@@ -32,60 +44,70 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: calc(3vw + 3rem);
     transition: .3s ease-in-out all;
 }
 
 .projectsSection .projects .project:hover {
-    transform: translateY(-2rem) scale(1.1);
+    transform: translateY(-1rem);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .projectsSection .projects .project h2 {
-    font-size: calc(1vw + 1rem);
-    margin-bottom: calc(1.5vw + 1.5rem);
-    overflow-y: hidden;
+    /* Clamped: Min 1.2rem, Max 1.6rem */
+    font-size: clamp(1.2rem, 1.5vw + 0.5rem, 1.6rem);
+    margin-bottom: 1.5rem;
 }
 
 .projectsSection .projects .project .desc {
     color: var(--blue-8);
-    text-align: center;
-    margin-bottom: calc(1.5vw + 1.5rem);
-    overflow-y: hidden;
+    /* Clamped: Min 0.9rem, Max 1.05rem for readability */
+    font-size: clamp(0.9rem, 0.3vw + 0.8rem, 1.05rem);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    flex-grow: 1; 
 }
 
+/* Tecnologias */
 .projectsSection .projects .project .tecnologies {
-    margin-bottom: calc(1.5vw + 1.5rem);
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
 
 .projectsSection .projects .project .tecnologies p {
-    font-size: calc(.75vw + .75rem);
+    font-size: 0.85rem;
     margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .projectsSection .projects .project .tecnologies .allTecnologies {
-    width: calc(15vw + 15rem);
-    height: fit-content;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .projectsSection .projects .project .tecnologies .allTecnologies svg {
-    height: calc(2.5vw + 2.5rem);
+    height: 3rem;
+    width: auto;
     transition: .3s ease-in-out all;
 }
 
 .projectsSection .projects .project .tecnologies .allTecnologies svg:hover {
-    transform: translateY(-.5rem);
+    transform: translateY(-0.3rem);
 }
 
+/* Link */
 .projectsSection .projects .project .link {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid transparent;
-    transition: .15s ease all;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: inherit;
     position: relative;
-    cursor: pointer;
+    padding-bottom: 2px;
 }
 
 .projectsSection .projects .project .link::after {
@@ -100,70 +122,63 @@
 }
 
 .projectsSection .projects .project .link:hover::after {
-    width: 94%;
+    width: 100%;
 }
 
 .projectsSection .projects .project .link p,
 .projectsSection .projects .project .link i {
-    margin-right: calc(.75vw + .25rem);
-    font-size: calc(.5vw + 1.25rem);
-    overflow-y: hidden;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
-@media (max-width: 1024px) {
-
-    .projectsSection h1 {
-        font-size: calc(2vw + 2rem);
+/* --- Lógica de Item Único Centralizado --- */
+@media (min-width: 1025px) {
+    .projectsSection .projects .project:last-child:nth-child(odd) {
+        grid-column: 1 / -1;   
+        max-width: 550px; 
     }
+}
 
+/* --- Responsividade: Tablets --- */
+@media (max-width: 1024px) {
     .projectsSection .projects {
-        width: 60vw;
-        flex-direction: column;
-        align-items: center;
+        width: 85%;
+        grid-template-columns: 1fr; 
+        gap: 3rem;
     }
 
     .projectsSection .projects .project {
-        width: 80vw;
+        max-width: 100%;
+    }
+
+    .projectsSection h1 {
+        font-size: 2.2rem;
     }
 
     .projectsSection .projects .project h2 {
-        font-size: calc(1.75vw + 1.75rem);
-    }
-
-    .projectsSection .projects .project .desc {
-        font-size: calc(.75vw + .75rem);
-    }
-
-    .projectsSection .projects .project .tecnologies {
-        width: 70%;
-    }
-
-    .projectsSection .projects .project .tecnologies p {
-        font-size: calc(1vw + 1rem);
-        text-decoration: underline;
-    }
-
-    .projectsSection .projects .project .tecnologies .allTecnologies {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .projectsSection .projects .project .tecnologies .allTecnologies svg {
-        height: calc(3.5vw + 3.5rem);
-        transition: .3s ease-in-out all;
+        font-size: 1.6rem;
     }
 }
 
 @media (max-width: 600px) {
-    .projectsSection h1 {
-        font-size: calc(1.25vw + 1.25rem);
+    .projectsSection {
+        padding: 2rem 1rem;
     }
 
-    .projectsSection .projects .project h2 {
-        font-size: calc(1.5vw + 1.5rem);
+    .projectsSection h1 {
+        font-size: 1.6rem;
+    }
+
+    .projectsSection .projects {
+        width: 100%;
     }
 
     .projectsSection .projects .project .desc {
         text-align: justify;
+        font-size: 1rem;
+    }
+
+    .projectsSection .projects .project .tecnologies .allTecnologies svg {
+        height: 2.5rem;
     }
 }
